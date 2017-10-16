@@ -1,0 +1,290 @@
+body,ul,li,p,img,h1,h2,h3,h4{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+}
+body a{
+	text-decoration: none;
+	transition: 0.5s all;       
+	/*所有a的效果过渡0.5s*/
+}
+img{
+	max-width: 100%;
+	/*图片最大宽度为100%*/
+	width: auto;
+	height: auto;
+	vertical-align: middle;
+	/*把此元素放置在父元素的中部*/
+}
+.container{
+	width: 100%;
+	margin: 0 auto;
+	/*固定宽度且居中*/
+}
+.header{
+	width: 100%;
+	padding: 33px 0;
+	background: #7ddf6c;
+}
+.nav{
+	width: 70%;
+}
+.nav ul li{
+	width: 19%;
+	display: inline-block;
+	/*将其设置为行内块级元素*/
+}
+.nav ul li:first-child{
+	text-align: center;
+	/*第一个li居中*/
+}
+.nav ul li a{
+	color: #fff;
+	font-size:1.2rem ;
+	font-weight: 600;
+}
+.nav ul li a:hover{
+	color: #000;
+}
+.menu{
+	position: absolute;
+	left: 2%;
+	top: 15px;
+	display: none;
+	/*将其隐藏*/
+}
+
+
+/*nav     END*/
+.logo{
+	position: absolute;
+	top: 0;
+	right: 10%;
+	z-index: 2;
+	/*将其层次关系设置为2*/
+} 
+/*logo    END*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	/*当设备的的宽度为768~992px之间时应用以下设置*/
+	.nav ul li a{
+		font-size:1rem ;
+	}
+	.logo{
+		width: 13%;
+		right: 6%;
+	}
+	
+}
+
+@media only screen and (max-width:768px ) {
+	/*当设备的宽度小于768px时应用以下设置*/
+	.nav ul{
+		display: none;
+	}
+	.nav{
+		width: 100%;
+	}
+	.nav ul li{
+		width: 100%;
+	}
+	.nav ul li{
+		text-align: center;
+		/*居中*/
+		line-height: 40px;
+	}
+	.nav .menu{
+		display: block;
+		cursor: pointer;
+		transition: 1s;
+	}
+	.nav .menu-btn{
+		transform: rotate(360deg);
+	}
+	.menu img{
+		width: 100%;
+	}
+	.logo{
+		width: 17%;
+		right: 4%;
+	}
+}
+@media only screen and (min-width:768px ) {
+	.nav ul{
+		display: block !important;
+	}
+}
+@media only screen and (max-width:360px ) {
+	/*当设备的宽度小于360px时应用以下设置*/
+	.logo{
+		width: 25%;
+		right: 4%;
+	}
+}
+/*media:nav + logo       END*/
+.banner{
+	width: 100%;
+	min-height: 680px;   
+	/*最小高度为680px*/
+	background: url(../img/banner.jpg) no-repeat left top;
+	background-size: cover;
+	position: relative;
+}
+.banner .banner-info{
+	width: 30%;
+	background: rgba(255,255,255,.65);
+	padding: 30px 30px;
+	position: absolute;
+	right: 0;
+	bottom: 15%;
+}
+.banner .banner-info h3{
+	font-size: 1.5rem;
+	color: #159400;
+	margin-bottom: 0.8rem;
+}
+.banner .banner-info p{
+	font-size: 0.9rem;
+	line-height: 1.8rem;
+}
+.banner .banner-info .button{
+	display: inline-block;
+	background: #159400;
+	padding: 7px 15px;
+	font-size: 1.2rem;
+	color: #fff;
+	margin-top: 0.8rem;
+}
+.banner .banner-info .button:hover{
+	background: #6cd79c;
+	text-decoration: underline;
+}
+/*banner        END*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	/*当设备的的宽度为768~992px之间时应用以下设置*/
+	.banner{
+		min-height: 465px;
+	}
+	.banner .banner-info{
+		width: 43%;
+		padding: 22px 22px;
+	}
+	.banner .banner-info h3{
+		font-size: 1.2rem;
+	}
+	.banner .banner-info .button{
+		font-size: 1rem;
+	}
+}
+@media only screen and (max-width:768px ) {
+	/*当设备的宽度小于768px时应用以下设置*/
+	.banner{
+		min-height: 360px;
+	}
+	.banner .banner-info{
+		width: 55%;
+		padding: 13px;
+	}
+	.banner .banner-info h3{
+		font-size: 1rem;
+	}
+	.banner .banner-info p{
+		font-size: 0.75rem;
+	}
+	.banner .banner-info .button{
+		font-size: 0.8rem;
+	}
+}
+/*media:banner          END*/
+.content{
+	background: #FFFDD2;
+	padding: 80px 0;
+	overflow: hidden;
+	/*清除浮动*/
+}
+.title h3{
+	font-size: 2rem;
+	color: #159400;
+	text-align: center;
+}
+.left-pic{
+	width: 50%;
+	float: left;
+	margin: 50px 15px 0;
+}
+.left-pic img{
+	width: 100%;
+}
+.right-main{
+	width: 45%;
+	float: left;
+	margin: 50px 15px 0;
+}
+.right-main .main-one{
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*清除浮动*/
+}
+.right-main .right-pic{
+	float: left;	
+	width: 15%;
+	margin-right: 3%;
+}
+.right-main .right-pic img{
+	width: 100%;
+}
+.right-main .right-text{
+	float: left;
+	width: 82%;
+}
+.right-main .right-text h3{
+	font-size: 1.3rem;
+	color: #7DDF6C;
+	margin-bottom: 0.8rem;
+}
+.right-main .right-text p{
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+}
+/*content    END*/
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+	/*当设备的的宽度为768~992px之间时应用以下设置*/
+	.left-pic{
+		width: 40%;
+		margin-top: 100px;
+	}
+	.right-main{
+		width: 52%;
+	}
+	.main-one{
+		margin-bottom: 26px;
+	}
+}
+@media only screen and (max-width:768px ) {
+	/*当设备的的宽度小于768px时应用以下设置*/
+	.main-one{
+		margin-bottom: 20px;
+	}
+	.left-pic,.right-main{
+		width: 90%;
+		margin: 50px auto 0;
+		float: none;
+	}
+}
+/*media:content         END*/
+.footer{
+	padding: 18px 0;
+	background: #7DDF6C;
+}
+.footer p{
+	font-size: 0.8rem;
+	text-align: center;
+	color: #fff;
+}
+.footer p a{
+	color: #fff;
+}
+.footer p a:hover{
+	color: #000;
+}
+/*footer      END*/

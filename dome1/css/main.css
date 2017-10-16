@@ -1,0 +1,254 @@
+body,div,ul,li,p{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+body{
+	background: #f5f5f5;
+	/*设置body的背景色*/
+}
+.container{
+	max-width: 840px;
+	width: 100%;
+	margin: 0 auto;
+	/*固定宽度且居中*/
+	overflow: hidden;
+	position: relative;
+}
+.left-aside{
+	max-width: 200px;
+	width: 100%;
+	background: #2d3741;
+	position: absolute;
+	height: 100%;
+	overflow-y:scroll ;
+	/*垂直方向内容溢出则出现滚动条*/
+}
+.left-aside .left-nav{
+	position: fixed;
+	/*根据窗口固定位置*/
+	top: 0;
+	bottom: 0;
+	width: 185px;
+}
+.left-aside nav{
+	padding: 80px 10px 10px;	
+}
+.left-aside nav li{
+	background: #36424b;
+	border-top: 1px solid #232d34;
+	height: 44px ;
+	line-height: 44px;
+}
+.left-aside nav li a{
+	color: #ced1d5;
+	text-decoration: none;
+	display: block;
+	/*将其设置为块级元素*/
+	padding-left: 15px;
+}
+.left-aside nav li a:hover{
+	color: white;
+	background: #2bab79;
+}
+/*left                 END*/
+
+@media only screen and (max-width: 992px) {
+	/*当设备宽度小于992时,使用如下设置*/
+	.left-aside{
+		display: none;
+		/*将其隐藏*/
+		z-index: 66;
+		/*将其的层级关系设为66*/
+	}
+	.left-asides{
+		z-index: 66;
+	}
+	.right-page{
+		max-width:840px;
+		width: 100%;
+		margin: 0 auto;
+		float: none !important;
+	}
+	.meun{
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+	.meun .meun-btn{
+		position: absolute;
+		top:15px;
+		left:10px;
+		width: 50px;
+		height: 50px;
+		border-radius: 10%;
+		-moz-border-radius: 10%;
+		-webkit-border-radius: 10%;
+		/*设置其圆角*/
+		background: yellowgreen;
+		z-index: 666;
+		cursor: pointer;
+		/*设置鼠标移上去的样式*/
+	}
+	.meun .meun-btn .btn:first-child{
+		margin-top: 9px;
+	}
+	.meun .meun-btn .btn{
+		width: 80%;
+		height: 7px;
+		background: #fff;
+		margin: 6px auto ;	
+		border-radius: 40%;
+		-moz-border-radius: 40%;
+		-webkit-border-radius: 40%;
+		transition: 1s;
+		设置其动画过渡时间为1s
+		
+	}
+	.meun .nav-btn .btn:nth-child(1){
+		transform:rotate(45deg) translate(9px,9px);
+		/*设置第一个.btn旋转45度,水平方向移动9px,垂直方向移动9px*/
+	}
+	.meun .nav-btn .btn:nth-child(2){
+		transform: translateX(30px);
+		/*设置第二个.btn水平方向移动30px*/
+		opacity: 0;
+		/*设置其不透明度为0*/
+	}
+	.meun .nav-btn .btn:nth-child(3){
+		transform:rotate(-45deg) translate(10px,-9px);
+		/*设置第三个.btn旋转-45度,水平方向移动10px,垂直方向移动-9px*/
+	}
+}
+@media only screen and (min-width:992px ) {
+	/*当设备宽度大于992px时使用如下样式*/
+	.left-aside{
+		display: block;
+		/*将其显示*/
+	}
+}
+/*************************************/
+.right-page{
+	max-width:640px;
+	width: 100%;
+	float: right;
+	margin-top: -35px;	
+}
+header{
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	/*垂直居中*/
+	background: #2bab79;
+}
+header h1{
+	font-size: 55px;
+	color: white;
+	text-align: center;
+}
+.content{
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	/*为元素指定任何内边距和边框都将在已设定的宽度和高度内进行绘制*/
+}
+.piclist{
+	background: #fff;
+	border-bottom: 1px solid #e6e8ea;
+	padding-left: 5px;
+}
+.piclist a{
+	display: block;
+	/*将其设置为块级元素*/
+	position: relative;
+}
+.piclist .pic{
+	display: block;
+	width: 100%;
+	min-height: 150px;
+}
+.piclist .bottom{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 30px 0 0px 60px;
+	margin-top: -40px;
+	height: 50px;
+	overflow: hidden;
+	/*清除浮动*/
+	color: #fff;
+}
+.piclist .bottom .face{
+	float: left;
+	margin-left: -50px;
+	width: 38px;
+	height: 38px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	/*设置其圆角*/
+	display: block;
+}
+.piclist .bottom h2{
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*当对象文本溢出时显示省略标记*/
+	white-space: nowrap;
+	font-size: 18px;
+	font-weight: bold;
+	height: 22px;
+	line-height: 22px;
+}
+.piclist .day{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	background: rgba(43,171,121,0.8);
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+}
+.piclist .infos{
+	margin: 7px 0 5px 40px;
+}
+.piclist .infos em{
+	font-style: normal;	
+	font-weight: bold;
+	float: left;
+	margin-left: -40px;
+	font-size: 15px;
+}
+.piclist .infos p{
+	max-height: 48px;
+	height: 100%;
+}
+/*content       END*/
+
+footer{
+	width: 100%;
+	margin: 20px auto;
+	text-align: center;
+	font-size: 10px;
+	height: 20px;
+	line-height: 20px;
+}
+.foot-switch{
+	color: #9ea3ab;
+}
+.foot-switch a{
+	color: #444;
+	text-decoration: none;
+}
+.foot-switch span{
+	margin-left: 30px;
+}
+/*footer    END*/
