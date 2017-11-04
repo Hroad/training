@@ -1,0 +1,150 @@
+body{
+	background: url(../img/2.png) repeat left top;
+}
+ul,li{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+a{
+	text-decoration: none;
+}
+a:hover{
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+}
+.container h1{
+	color: #3c2f24;
+	font-size: 3em;
+	text-align: center;
+	margin: 2em 0 1em 0;
+}
+.element-left,.element-middle{
+	margin-bottom: 10px;
+}
+/*header     END*/
+
+.element{
+	padding: 2em;
+}
+.element .element-left .edit{
+	width: 100%;
+	background: #fff;
+	padding: 30px 4px 30px;
+}
+.element .element-left .edit input:nth-child(1){
+	width: 90%;
+	margin: 0 5%;
+	padding: 0.5em 0 0.5em 2.7em;
+	font-size: 15px;
+	font-weight: 500;
+	color: #858282;
+	background: url(../img/user.png) no-repeat 8px center;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+}
+.element .element-left .edit input:nth-child(2){
+	width: 90%;
+	margin: 0 5%;
+	padding: 0.5em 0 0.5em 2.7em;
+	font-size: 15px;
+	font-weight: 500;
+	color: #858282;
+	background: url(../img/lock.png) no-repeat 8px center;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+}
+.element .element-left .submit input{
+	width: 100%;
+	padding: 15px 0;
+	font-size: 20px;
+	font-weight: 500;
+	background: #ef8d32;
+	border: 0;
+	outline: none;
+	/*去除点击之后会出现的边框*/
+	color: #fff;
+	transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+}
+.element .element-left .submit input:hover{
+	background: #ee5a32;
+}
+/*left      END*/
+
+.teddy-beay{
+	text-align: center;
+	background: #fff;
+}
+.teddy-beay .teddy-pic{
+	padding: 20px 0;
+	background: #fff;
+}
+.teddy-beay .teddy-pic img{
+	width: 60%;
+	padding: 8px;
+	border: 3px solid #ee5a32;
+	border-radius: 45%;
+	margin: 0 auto;
+}
+.teddy-beay .teddy-pic h4{
+	font-size: 1.2em;
+	color: #EE5A32;
+	margin: 1em 0 0;
+}
+.teddy-text{
+	background: #ef8d32;
+	padding: 0.5em 0;
+	overflow: hidden;
+	color: #fff;
+}
+.teddy-text .fans{
+	border-right: 1px solid #fff;
+}
+.teddy-text h3{
+	font-size: 0.9em;
+}
+.teddy-text p{
+	font-size: 0.8em;
+}
+/*middle    END*/
+
+.element-right ul li{
+	padding: 25px;
+	background: #EF8D32;
+	font-weight: 100;
+	color: #fff;
+	padding-left:30px;
+	overflow: hidden;
+}
+.element-right ul li:hover{
+	background: #EE5A32;
+}
+.badge{
+	background: #50577e;
+}
+/*以下是雪碧图原理*/
+.icon{
+	width: 25px;
+	height: 23px;
+	display: inline-block;
+	float: left;
+	margin-right: 15px;
+	background: url(../img/img-sprite.png) no-repeat -1px -2px;
+}
+
+.stat{
+	background: url(../img/img-sprite.png) no-repeat -30px -4px;
+}
+
+.msg{
+	background: url(../img/img-sprite.png) no-repeat -62px -2px;
+}
+
+.signout{
+	background: url(../img/img-sprite.png) no-repeat -93px -2px;
+}
